@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ProductListItem(props) {
   return (
-    <div className="card" style={{ width: 15 + 'rem' }}>
+    <div className="card" style={{ width: 15 + 'rem' }} key={props.id}>
       <div className="media">
         <img className = "img-fluid" src={props.image}></img>
       </div>

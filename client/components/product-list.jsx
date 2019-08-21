@@ -18,11 +18,13 @@ export default class ProductList extends React.Component {
     this.getProducts();
   }
   generateProduct() {
-    return this.state.products.map(obj => {
+    return this.state.products.map((obj, val) => {
       return (
-        <div className="col">
-          <ProductListItem image={obj.image} name={obj.name} price={obj.price}></ProductListItem>
-      </div>
+        <div className="col" key={obj.id} >
+          <ProductListItem image={obj.image} name={obj.name}
+            price={obj.price} shortDescription={obj.shortDescription}>
+          </ProductListItem>
+        </div>
       );
     });
   }
