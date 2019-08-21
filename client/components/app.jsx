@@ -1,7 +1,14 @@
 import React from 'react';
+import Header from './header.jsx';
+import ProductList from './product-list.jsx';
 
 export default class App extends React.Component {
   render() {
-    return null;
+    return (
+      <>
+        <Header></Header>
+        <ProductList></ProductList>
+      </>
+    );
   }
 }
