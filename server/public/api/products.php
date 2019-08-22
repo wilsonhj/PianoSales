@@ -1,5 +1,6 @@
 <?php
 require_once(__DIR__.'/functions.php');
+require_once('./db_connection.php');
 set_exception_handler("error_handler");
 // header('Content-Type: application/json');
 
