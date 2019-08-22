@@ -20,7 +20,7 @@ export default class ProductList extends React.Component {
   generateProduct() {
     return this.state.products.map((obj, val) => {
       return (
-        <div className="col" key={obj.id} >
+        <div className="product-card col-sm-6 col-lg-4" key={obj.id} >
           <ProductListItem image={obj.image} name={obj.name}
             price={obj.price} shortDescription={obj.shortDescription}>
           </ProductListItem>
@@ -30,7 +30,7 @@ export default class ProductList extends React.Component {
   }
   render() {
     return (
-      <div className="container">
+      <div className="container col-12 table">
         <div className="row">
           {this.generateProduct()}
         </div>
