@@ -6,8 +6,8 @@ export default class App extends React.Component {
   render() {
     return (
       <>
-        <Header></Header>
-        <ProductList></ProductList>
+        <Header className=""></Header>
+        <ProductList className="container-fluid"></ProductList>
       </>
     );
   }

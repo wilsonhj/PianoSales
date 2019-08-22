@@ -2,6 +2,6 @@ import React from 'react';
 
 export default function Header() {
   return (
-    <header>Wicked Sales</header>
+    <header className="text-center" >Wicked Sales</header>
   );
 }
