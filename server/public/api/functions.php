@@ -1,5 +1,6 @@
 <?php
 function error_handler($error){
+  header("HTTP/1.1 500 Internal Server Error", true, 500);
   $output = array(
     "success" => false,
     "error" => $error->getMessage()
@@ -8,5 +9,4 @@ function error_handler($error){
   print $json_output;
   die();
 }
-
 ?>
