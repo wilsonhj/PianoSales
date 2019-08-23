@@ -30,7 +30,7 @@ export default class ProductList extends React.Component {
   }
   render() {
     return (
-      <div className="container col-12 table">
+      <div className="container col-12 grid-container">
         <div className="row">
           {this.generateProduct()}
         </div>
