@@ -1,15 +1,10 @@
-.card{
+.product-card{
   align-items: center;
+  padding: 0;
 }
-.img-fluid{
+.image{
  height: 25vw;
 }
-.header{
-  
-}
-.table{
+.grid-container{
   overflow: scroll;
-}
-.product-card{
-  padding: 0;
 }
