@@ -1,0 +1,10 @@
+.product-card{
+  align-items: center;
+  padding: 0;
+}
+.image{
+ height: 25vw;
+}
+.grid-container{
+  overflow: scroll;
+}
