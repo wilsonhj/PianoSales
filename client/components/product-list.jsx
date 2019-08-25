@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import ProductListItem from './product-list-item.jsx';
 
 export default class ProductList extends React.Component {
