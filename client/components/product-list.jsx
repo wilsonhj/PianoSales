@@ -22,7 +22,8 @@ export default class ProductList extends React.Component {
       return (
         <div className="product-card col-sm-6 col-lg-4" key={obj.id} >
           <ProductListItem image={obj.image} name={obj.name}
-            price={obj.price} shortDescription={obj.shortDescription}>
+            price={obj.price} shortDescription={obj.shortDescription}
+            setView = {this.props.view} >
           </ProductListItem>
         </div>
       );
