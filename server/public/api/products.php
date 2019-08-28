@@ -21,10 +21,8 @@ $result = mysqli_query($conn, $query);
 if(!$result){
   throw new Exception(mysqli_error($conn));
 }
-if(mysqli_num_rows($result) === 0){
-  if(!empty($_GET['id'])){
-    throw new Exception('Invalid id: ' . $_GET['id']);
-  }
+if(mysqli_num_rows($result) === 0 && !empty($_GET['id'])){
+  throw new Exception('Invalid id: ' . $_GET['id']);
 }
 
 $output = [];
