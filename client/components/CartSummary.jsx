@@ -3,12 +3,10 @@ import CartSummaryItem from './cart-summary-item.jsx';
 
 export default function CartSummary(props) {
   return (
-    <div className="container">
-      <div className="row ">
-        <div className="col-4 col-sm-4 col-md-4 col-lg-4">
-          <button className="btn btn-link justify-content-start" onClick={() => props.view('catalog', {})}>Back to catalog</button>
-          <h5 card-header>My Cart</h5>
-        </div>
+    <div className="container-fluid">
+      <div className="row justify-content-between">
+        <button className="btn btn-link justify-content-start" onClick={() => props.view('catalog', {})}>Back to catalog</button>
+        <h5 className="m-2">My Cart</h5>
       </div>
       <div className="row">
         {props.cart.map(cartItem => <CartSummaryItem key={cartItem.id} image={cartItem.image}

@@ -6,7 +6,9 @@
   overflow: scroll;
 }
 .cart-picture{
-  max-height: 15vw;
+  /* max-height: 15vw; */
+  height: 200px;
+  width: 200px;
 }
 .frontpage-image{
   height: 200px;
