@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ProductListItem(props) {
   return (
-    <div className="card product-list-item" key={props.id} onClick={() => props.setView('details', { id: props.id })} >
+    <div className="card product-list-item align-items-center" key={props.id} onClick={() => props.setView('details', { id: props.id })} >
       <img className = "img-fluid frontpage-image" src={props.image}></img>
       <div className="card-body">
         <h5 className="card-title">{props.name}</h5>
