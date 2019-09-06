@@ -10,7 +10,7 @@ if(empty($_GET['id'])){
 }elseif(!is_numeric($_GET['id'])){
   throw new Exception("id needs to be a number");
 }else{
-  $id = $_GET['id'];
+  $id = $_GET['id'];2
   $whereClause = "WHERE `id` = {$id}";
 }
 

@@ -3,42 +3,42 @@
     "id": 1,
     "name": "Shake Weight",
     "price": 2999,
-    "image": "https://bit.ly/2JtVNE6",
+    "image": ["https://bit.ly/2JtVNE6", "https://media3.giphy.com/media/YMlUABR5loCbe/giphy.gif"],
     "shortDescription": "Dynamic Inertia technology ignites muscles in arms, shoulders, and chest."
   },
   {
     "id": 2,
     "name": "ShamWow",
     "price": 2595,
-    "image": "https://bit.ly/2w9C3Nm",
+    "image": ["https://bit.ly/2w9C3Nm", "https://tvstuffreviews.com/p/shamwow.jpg"],
     "shortDescription": "It's like a chamois, towel, and sponge, all in one! Soaks up to 10x it's weight in any liquid!"
   },
   {
     "id": 3,
     "name": "Snuggie",
     "price": 2900,
-    "image": "https://bit.ly/2LVHYAk",
+    "image": ["https://bit.ly/2LVHYAk", "http://cdn.shopify.com/s/files/1/0030/4375/4041/products/the-japanese-snuggie-happened_1200x1200.jpg?v=1525188797"],
     "shortDescription": "Super-Soft Fleece with pockets! One Size fits all Adults! Keeps you Warm & Your Hands-Free!"
   },
   {
     "id": 4,
     "name": "Wax Vac",
     "price": 999,
-    "image": "https://bit.ly/2EjCU2a",
+    "image": ["https://bit.ly/2EjCU2a", "https://cdn3.volusion.com/bdaks.jjzva/v/vspfiles/photos/wax_vac-2.jpg?1406106357"],
     "shortDescription": "Gentle way to remove ear wax. Safe and hygienic. Reduces the risk of painful infections."
   },
   {
     "id": 5,
     "name": "Ostrich Pillow",
     "price": 9900,
-    "image": "https://bit.ly/2VD80b8",
+    "image": ["https://bit.ly/2VD80b8", "https://m.media-amazon.com/images/S/abs-image-upload-na/5/AmazonStores/ATVPDKIKX0DER/328d725346299b938f4609efc572e3e2.w1200.h1200._CR0%2C0%2C1200%2C1200_SX750_SY750_.jpg"],
     "shortDescription": "Create your own snugly space in the world and feel-good anywhere with the ultimate cocoon pillow."
   },
   {
     "id": 6,
     "name": "Tater Mitts",
     "price": 830,
-    "image": "https://bit.ly/2w9EmzO",
+    "image": ["https://bit.ly/2w9EmzO", "https://i.kinja-img.com/gawker-media/image/upload/s--ehd1mW66--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/18s09jsio0l2ejpg.jpg"],
     "shortDescription": "8 Seconds is All You Need with Tater Mitts Quickly and easily prepare all your favorite potato dishes with Tater Mitts."
   }
 ]
