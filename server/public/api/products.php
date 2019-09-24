@@ -10,13 +10,16 @@ if(empty($_GET['id'])){
 }elseif(!is_numeric($_GET['id'])){
   throw new Exception("id needs to be a number");
 }else{
-  $id = $_GET['id'];2
+  $id = $_GET['id'];
   $whereClause = "WHERE `id` = {$id}";
 }
-
-
-
-$query = "SELECT * FROM `products` {$whereClause}";
+$query = "SELECT id, name, price, image, shortDescription,
+GROUP_CONCAT(image_url) AS imgs
+FROM `products` AS p
+  JOIN `images` AS i 
+    ON `i`.`product_id` = p.id
+  GROUP BY i.product_id";
+// $query = "SELECT * FROM `products` {$whereClause}";
 $result = mysqli_query($conn, $query);
 if(!$result){
   throw new Exception(mysqli_error($conn));
@@ -24,13 +27,12 @@ if(!$result){
 if(mysqli_num_rows($result) === 0 && !empty($_GET['id'])){
   throw new Exception('Invalid id: ' . $_GET['id']);
 }
-
 $output = [];
 
 while($row = mysqli_fetch_assoc($result)) {
+  $row['imgs'] = explode($delimiter=",", $string=$row['imgs']);
   $output[] = $row; 
 }
 $json_output = json_encode($output);
 print $json_output;
-
 ?>
