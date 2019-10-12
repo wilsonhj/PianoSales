@@ -6,16 +6,17 @@
   overflow: scroll;
 }
 .cart-picture{
-  max-height: 15vw;
+  /* max-height: 15vw; */
+  height: 200px;
+  width: 200px;
 }
 .frontpage-image{
-  max-height: 20vw;
-  max-width: 20vw; 
+  height: 200px;
+  width: 250px;
 }
 .cart-summary-item{
   max-width: 50vw;
 }
 .product-list-item{
-  max-width: 30vw;
-  max-height: 30vw;
+  height: 100%;
 }
