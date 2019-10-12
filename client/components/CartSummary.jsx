@@ -2,6 +2,7 @@ import React from 'react';
 import CartSummaryItem from './cart-summary-item.jsx';
 
 export default function CartSummary(props) {
+  console.log(props.cart, "cart");
   return (
     <div className="container p-4">
       <button className="btn btn-link mb-3" onClick={() => props.view('catalog', {})}>Back to catalog</button>

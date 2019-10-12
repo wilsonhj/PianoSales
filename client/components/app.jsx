@@ -3,6 +3,7 @@ import Header from './header.jsx';
 import ProductList from './product-list.jsx';
 import ProductDetails from './product-details';
 import CartSummary from './CartSummary.jsx';
+import CheckoutForm from './checkout-form.jsx';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -36,9 +37,22 @@ export default class App extends React.Component {
       },
       body: JSON.stringify(product)
     }).then(response => response.json())
-      .then(product => this.setState({ cart: [...this.state.cart, product] }));
+      .then(product => this.setState({ cart: product }));
   }
 
+  placeOrder({ name, creditCard, shippingAddress }) { // obj destructuring
+    fetch('/api/orders.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ name, creditCard, shippingAddress, cart: this.state.cart }) // combine obj with App Cart state
+    }).then(response => response.json())
+      .then(response => this.setState({
+        cart: [], // reset cart to empty array
+        view: { name: 'catalog', params: {} } // change the App's view state back
+      }));
+  }
   renderView() {
     // switch case
   }
@@ -63,6 +77,13 @@ export default class App extends React.Component {
         <>
           <Header cartItemCount={this.state.cart.length} viewClick={() => this.setView('cart', {}) }></Header>
           <CartSummary cart={this.state.cart} view={this.setView}> </CartSummary>
+        </>
+      );
+    } else if (this.state.view.name === 'checkout') {
+      return (
+        <>
+          <Header cartItemCount={this.state.cart.length} viewClick={() => this.setView('cart', {}) }></Header>
+          <CheckoutForm cart={this.state.cart} view={this.setView} placeOrder={this.placeOrder}></CheckoutForm>
         </>
       );
     }
