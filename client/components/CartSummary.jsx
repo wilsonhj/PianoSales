@@ -15,10 +15,10 @@ export default function CartSummary(props) {
       </div>
       <div className="row justify-content-between">
         <h5 className="card-footer d-flex justify-content-start">Item Total ${props.cart.reduce((total, obj) => {
-          return obj.price + total;
+          return parseInt(obj.price, 10) + parseInt(total, 10);
         }, 0)}</h5>
         <button className="btn btn-success d-flex justify-content-end" onClick={() => props.view('checkout', {})}>Checkout</button>
       </div>
     </div>
-  );
+  ); 
 }
