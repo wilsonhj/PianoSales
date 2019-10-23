@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductListItem from './product-list-item.jsx';
+import ProductsCarousel from './carousel.jsx';
 
 export default class ProductList extends React.Component {
   constructor(props) {
@@ -19,7 +20,7 @@ export default class ProductList extends React.Component {
   generateProduct() {
     return this.state.products.map((obj, val) => {
       return (
-        <div className="product-card col-sm-6 col-lg-4" key={obj.id} >
+        <div className="product-card col-sm-12 col-md-6 col-xl-4 p-1" key={obj.id} >
           <ProductListItem image={obj.image} name={obj.name} id={obj.id}
             price={obj.price} shortDescription={obj.shortDescription}
             setView = {this.props.view} >
@@ -28,13 +29,33 @@ export default class ProductList extends React.Component {
       );
     });
   }
-  render() {
+  generateProductCarousel() {
     return (
-      <div className="container col-12 grid-container">
-        <div className="row">
-          {this.generateProduct()}
+      <ProductsCarousel items={this.state.products.map(obj => {
+        return {
+          src: obj.image,
+          caption: obj.name
+        };
+      })}></ProductsCarousel>
+    );
+  }
+  render() {
+    // const style = {};
+    // style.container = {
+    //   height: '50vmin',
+    //   width: '50vmin'
+    // };
+    return (
+      <>
+        <div className="container pt-5" >
+          {this.generateProductCarousel()}
         </div>
-      </div>
+        <div className="container grid-container">
+          <div className="row">
+            {this.generateProduct()}
+          </div>
+        </div>
+      </>
     );
   }
 }

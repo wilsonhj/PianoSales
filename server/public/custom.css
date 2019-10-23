@@ -1,0 +1,58 @@
+#wicked-header{
+  background-color: #002fa7;
+  z-index: 200;
+  box-shadow: 0 3px 5px rgba(0,0,0,.05);
+  position: fixed;
+  width: 100%;
+} 
+
+#wicked-header h3 {
+  margin: 0;
+}
+
+.product-card{
+  align-items: center;
+  padding: 0;
+}
+.grid-container{
+  overflow: scroll;
+  padding-top: 42px;
+}
+.cart-picture{
+  /* max-height: 15vw; */
+  height: 200px;
+  width: 200px;
+}
+.frontpage-image{
+  height: 200px;
+  width: 250px;
+}
+
+.product-list-item{
+  height: 100%;
+}
+
+.carousel-item > img {
+  width: 50px;
+  height: 50px;
+}
+.carousel-item, .carousel-item.active {
+  align-items: center;
+}
+.carouselImage{
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.carousel{
+  height: 50vh;
+}
+
+ .carousel-control-next-icon, .carousel-control-prev-icon {
+  background-color: black;
+}
+
+.carousel-indicators li {
+  background-color: #002fa7;
+}

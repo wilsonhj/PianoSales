@@ -2,10 +2,12 @@ import React from 'react';
 
 export default function Header(props) {
   return (
-    <header className="text-center header border border-dark bg-primary text-white container-fluid">
-      <div className="row-12 justify-content-between">
-        <h1 className="d-inline-flex p-2">Wicked Sales</h1>
-        <i className="fas fa-shopping-cart d-inline-flex " onClick={props.viewClick}> {props.cartItemCount} items </i>
+    <header id="wicked-header" className="text-center header text-white">
+      <div className="container">
+        <div className="row justify-content-between align-items-center">
+          <h3 className="flex-grow-1">Wicked Sales</h3>
+          <i className="fas fa-shopping-cart mr-3" onClick={props.viewClick}> {props.cartItemCount}</i>
+        </div>
       </div>
     </header>
   );
