@@ -15,8 +15,8 @@ export default class ProductDetails extends React.Component {
   render() {
     if (this.state.product) {
       return (
-        <div className="card product-details container-fluid col-12" key = {this.state.product.id}>
-          <div className="row card-body">
+        <div className="card product-details container-fluid col-12 " key = {this.state.product.id}>
+          <div className="row card-body mt-3">
             <div className="col-sm-6 ">
               <button className="btn btn-link mb-3" onClick={() => this.props.view('catalog', {})}> Back to Catalog </button>
               <img src={this.state.product.image} className="img-fluid "></img>

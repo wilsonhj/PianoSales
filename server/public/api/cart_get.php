@@ -15,7 +15,8 @@ $query = "SELECT cartItems.price AS price,
           cartItems.count AS `count`,
           products.Name AS name,
           products.image AS image,
-          products.id AS `id`
+          products.id AS `id`,
+          products.shortDescription AS `shortDescription`
           FROM cartItems 
           INNER JOIN products ON cartItems.productID = products.id
           WHERE cartItems.cartId = $cartId";
